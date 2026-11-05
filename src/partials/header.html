@@ -1,24 +1,3 @@
-<div class="topbar" role="region" aria-label="Hospital contact information">
-  <div class="container topbar__inner">
-    <ul class="topbar__list">
-      <li>{{icon:i-phone:icon icon--xs}} <span class="sr-only">Telephone:</span>{{tel:phone}}</li>
-      <li class="topbar__hide-md">{{icon:i-clock:icon icon--xs}} <span>{{hours.visitingShort}}</span></li>
-      {{#if emergency.verified}}<li class="topbar__emergency">Emergency: {{tel:emergency}}</li>{{/if}}
-    </ul>
-    <div class="topbar__right">
-      <a class="topbar__link" href="mailto:{{email}}">{{icon:i-mail:icon icon--xs}} {{email}}</a>
-      <div class="topbar__tools">
-        <label class="lang-select">{{icon:i-globe:icon icon--xs}}<span class="sr-only">Language</span>
-          <select data-lang-select aria-label="Language">
-            <option value="en" lang="en">English</option>
-            <option value="hi" lang="hi">हिन्दी</option>
-            <option value="kn" lang="kn">ಕನ್ನಡ</option>
-          </select>
-        </label>
-      </div>
-    </div>
-  </div>
-</div>
 <header class="site-header" data-header>
   <div class="container site-header__inner">
     <a class="logo" href="index.html" aria-label="{{name}}, home">{{> logo}}</a>
@@ -33,15 +12,29 @@
       </ul>
       <div class="nav__mobile-extra">
         <a class="btn btn--primary btn--block" href="appointment.html">Book an Appointment</a>
+        <label class="lang-select lang-select--menu">{{icon:i-globe:icon icon--xs}}<span>Language</span>
+          <select data-lang-select aria-label="Language">
+            <option value="en" lang="en">English</option>
+            <option value="hi" lang="hi">हिन्दी</option>
+            <option value="kn" lang="kn">ಕನ್ನಡ</option>
+          </select>
+        </label>
         <p class="nav__mobile-contact">{{icon:i-phone:icon icon--xs}} {{tel:phone}}<br>{{icon:i-clock:icon icon--xs}} OPD {{hours.opd}}</p>
       </div>
     </nav>
     <div class="site-header__actions">
+      <label class="lang-select lang-select--header">{{icon:i-globe:icon icon--xs}}<span class="sr-only">Language</span>
+        <select data-lang-select aria-label="Language">
+          <option value="en" lang="en">EN</option>
+          <option value="hi" lang="hi">हिन्दी</option>
+          <option value="kn" lang="kn">ಕನ್ನಡ</option>
+        </select>
+      </label>
+      <a class="header-call" href="tel:{{phone.tel}}" aria-label="Call {{phone.display}}"><span class="header-call__icon">{{icon:i-phone:icon icon--sm}}</span><span class="header-call__num" aria-hidden="true">{{phone.display}}</span></a>
       <a class="btn btn--primary btn--header" href="appointment.html" {{nav:appointment}}>Book an Appointment</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
         <span class="sr-only" data-nav-label>Open menu</span>
-        <svg class="icon nav-toggle__open" aria-hidden="true"><use href="#i-menu"></use></svg>
-        <svg class="icon nav-toggle__close" aria-hidden="true"><use href="#i-close"></use></svg>
+        <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span></span>
       </button>
     </div>
   </div>

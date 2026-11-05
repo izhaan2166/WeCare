@@ -8,7 +8,7 @@
 
   /* ---------- Sticky header state ---------- */
   var header = document.querySelector('[data-header]');
-  function onScroll() { if (header) header.classList.toggle('is-scrolled', window.scrollY > 8); }
+  function onScroll() { if (header) header.classList.toggle('is-scrolled', window.scrollY > 24); }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -36,6 +36,65 @@
     nav.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
     window.addEventListener('resize', function () { if (window.innerWidth >= 1100 && nav.classList.contains('is-open')) setOpen(false); });
   }
+
+  /* ---------- Mobile quick-action bar: tucked away while the home hero is in view ---------- */
+  var bar = document.querySelector('[data-action-bar]');
+  var heroEl = document.querySelector('.cine-hero');
+
+  /* ---------- Scroll-linked motion: parallax, text scrub, journey line ---------- */
+  var parallax = reduceMotion ? [] : Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+  var scrubs = Array.prototype.slice.call(document.querySelectorAll('[data-scrub]'));
+  var journey = document.querySelector('[data-journey]');
+  var ticking = false;
+  function frame() {
+    ticking = false;
+    var vh = window.innerHeight;
+    parallax.forEach(function (el) {
+      var r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      var speed = parseFloat(el.getAttribute('data-parallax')) || 0;
+      var offset = (r.top + r.height / 2 - vh / 2) * -speed;
+      el.style.transform = 'translate3d(0,' + offset.toFixed(1) + 'px,0)';
+    });
+    scrubs.forEach(function (el) {
+      if (reduceMotion) { el.style.setProperty('--p', 1); return; }
+      var r = el.getBoundingClientRect();
+      var p = (vh * 0.88 - r.top) / (r.height + vh * 0.38);
+      el.style.setProperty('--p', Math.max(0, Math.min(1, p)).toFixed(3));
+    });
+    if (journey) {
+      var jr = journey.getBoundingClientRect();
+      var jp = reduceMotion ? 1 : (vh * 0.85 - jr.top) / (jr.height + vh * 0.2);
+      journey.style.setProperty('--j', Math.max(0, Math.min(1, jp)).toFixed(3));
+    }
+    if (bar) bar.classList.toggle('is-tucked', !!heroEl && window.scrollY < vh * 0.55);
+  }
+  function requestFrame() { if (!ticking) { ticking = true; window.requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', requestFrame, { passive: true });
+  window.addEventListener('resize', requestFrame);
+  frame();
+
+  /* ---------- Doctors rail ---------- */
+  document.querySelectorAll('[data-rail]').forEach(function (rail) {
+    var section = rail.closest('section');
+    var controls = section.querySelector('[data-rail-controls]');
+    var prev = section.querySelector('[data-rail-prev]');
+    var next = section.querySelector('[data-rail-next]');
+    var progress = section.querySelector('[data-rail-progress]');
+    var step = function () { var c = rail.querySelector('li'); return c ? c.getBoundingClientRect().width + 20 : 300; };
+    var update = function () {
+      var max = rail.scrollWidth - rail.clientWidth;
+      if (controls) controls.hidden = max <= 4;
+      if (prev) prev.disabled = rail.scrollLeft <= 4;
+      if (next) next.disabled = rail.scrollLeft >= max - 4;
+      if (progress) progress.parentNode.style.setProperty('--rail', max > 0 ? (rail.clientWidth + rail.scrollLeft) / rail.scrollWidth : 1);
+    };
+    if (prev) prev.addEventListener('click', function () { rail.scrollBy({ left: -step(), behavior: reduceMotion ? 'auto' : 'smooth' }); });
+    if (next) next.addEventListener('click', function () { rail.scrollBy({ left: step(), behavior: reduceMotion ? 'auto' : 'smooth' }); });
+    rail.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
 
   /* ---------- Accordion ---------- */
   document.querySelectorAll('[data-accordion]').forEach(function (acc) {
@@ -125,10 +184,12 @@
     var d = new URLSearchParams(window.location.search).get('dept');
     if (d && deptSelect.querySelector('option[value="' + d.replace(/[^\w-]/g, '') + '"]')) deptSelect.value = d;
   }
+  var tomorrow = (function () { var t = new Date(); t.setDate(t.getDate() + 1); return t.getFullYear() + '-' + String(t.getMonth() + 1).padStart(2, '0') + '-' + String(t.getDate()).padStart(2, '0'); })();
+  document.querySelectorAll('#appt-date, [data-min-tomorrow]').forEach(function (el) { el.min = tomorrow; });
   var dateInput = document.getElementById('appt-date');
   if (dateInput) {
-    var t = new Date(); t.setDate(t.getDate() + 1);
-    dateInput.min = t.toISOString().slice(0, 10);
+    var qd = new URLSearchParams(window.location.search).get('date');
+    if (qd && /^\d{4}-\d{2}-\d{2}$/.test(qd) && qd >= tomorrow) dateInput.value = qd;
   }
 
   /* ---------- Forms: validation and sending ----------

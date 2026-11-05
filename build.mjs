@@ -62,6 +62,25 @@ const renderers = {
         </a>
       </li>`).join(''),
 
+  // Home bento: tile 1 is the large feature, tile 4 the wide one; both carry the department portrait.
+  'dept-bento': () => departments.map((d, i) => {
+    const size = i === 0 ? ' bento__tile--feature' : i === 3 ? ' bento__tile--wide' : '';
+    const pic = size && d.portrait ? `<span class="bento__pic"><img src="${d.portrait.src}-900.jpg" srcset="${d.portrait.src}-480.jpg 480w, ${d.portrait.src}-900.jpg 900w" sizes="(min-width: 1000px) 30vw, 90vw" alt="" width="900" height="810" loading="lazy" decoding="async"></span>` : '';
+    return `
+      <li class="bento__tile${size} reveal" style="--d:${i % 4}">
+        <a class="bento__link" href="specialities.html#${d.id}">
+          <span class="bento__top"><span class="bento__icon">${icon(d.icon)}</span><span class="bento__num" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span></span>
+          <div class="bento__copy">
+            <h3 class="bento__title">${esc(d.name)}</h3>
+            <p class="bento__text">${esc(d.short)}</p>
+            <span class="bento__more">Explore Department ${icon('i-arrow-ne', 'icon icon--sm')}</span>
+          </div>${pic}
+        </a>
+      </li>`;
+  }).join(''),
+
+  'dept-marquee': () => departments.map((d) => `<span class="marquee__item">${esc(d.name)}</span><span class="marquee__dot" aria-hidden="true"></span>`).join(''),
+
   'dept-index': () => departments.map((d) => `
         <li><a href="#${d.id}">${icon(d.icon, 'icon icon--sm')}<span>${esc(d.name)}</span></a></li>`).join(''),
 
