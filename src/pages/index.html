@@ -1,0 +1,237 @@
+<!--page {"title": "WeCare Hospital | Multispeciality Hospital", "description": "WeCare Hospital is a multispeciality hospital offering cardiology, orthopaedics, neurology, paediatrics and more. Request an appointment online.", "nav": "home"} -->
+<!-- A. Hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">Compassionate care. Better health.</p>
+      <h1 id="hero-title">Your Health Deserves <em>Thoughtful</em> Care.</h1>
+      <p class="hero__text">At {{name}}, every visit begins with listening. Our specialists take the time to understand you, explain each step in plain language and work together across departments, so you and your family always know what comes next.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="appointment.html">Book an Appointment {{icon:i-arrow:icon icon--sm}}</a>
+        <a class="btn btn--outline" href="specialities.html">Explore Our Specialities</a>
+      </div>
+      <ul class="hero__assure" aria-label="What to expect">
+        <li>{{icon:i-check:icon icon--sm}} Unhurried consultations</li>
+        <li>{{icon:i-check:icon icon--sm}} Coordinated specialist care</li>
+        <li>{{icon:i-check:icon icon--sm}} Clear next steps</li>
+      </ul>
+    </div>
+    <div class="hero__media">
+      <div class="hero__frame">
+        {{img:hero:half:eager}}
+        <span class="hero__tag">{{descriptor}}</span>
+      </div>
+      <div class="hero__card">
+        <span class="hero__card-icon">{{icon:i-calendar}}</span>
+        <p><strong>Outpatient consultations</strong>{{hours.opd}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick access -->
+<nav class="quick" aria-label="Quick access">
+  <div class="container">
+    <ul class="quick__list">
+      <li class="quick__item"><a href="specialities.html"><span class="quick__icon">{{icon:i-compass-alt:icon}}</span><span><strong>Find a speciality</strong><span>Eight departments</span></span>{{icon:i-arrow:icon icon--sm}}</a></li>
+      <li class="quick__item"><a href="doctors.html"><span class="quick__icon">{{icon:i-person}}</span><span><strong>Find a doctor</strong><span>Browse by department</span></span>{{icon:i-arrow:icon icon--sm}}</a></li>
+      <li class="quick__item"><a href="appointment.html"><span class="quick__icon">{{icon:i-calendar}}</span><span><strong>Request an appointment</strong><span>Online enquiry form</span></span>{{icon:i-arrow:icon icon--sm}}</a></li>
+      <li class="quick__item"><a href="patient-information.html#visitors"><span class="quick__icon">{{icon:i-clock}}</span><span><strong>Visiting hours</strong><span>{{hours.visiting}}</span></span>{{icon:i-arrow:icon icon--sm}}</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- D. Introduction -->
+<section class="section" aria-labelledby="intro-title">
+  <div class="container split split--wide-media">
+    <div class="media-stack reveal">
+      <div class="media-stack__main">{{img:intro:half}}</div>
+      <div class="media-stack__inset">{{img:introInset:small}}</div>
+    </div>
+    <div class="reveal" style="--d:1">
+      <p class="eyebrow">About {{name}}</p>
+      <h2 id="intro-title">Specialist care that still feels personal.</h2>
+      <p class="lead">We believe good healthcare starts with a proper conversation. Our consultants make time to listen, examine carefully and talk you through your options before any decision is made.</p>
+      <p class="muted">When your care involves more than one specialist, your doctors coordinate with each other so you are not left to connect the dots. From your first appointment to follow-up, you will have clear information about what is happening and why.</p>
+      <ul class="pillars">
+        <li>{{icon:i-chat}}<span><strong>Time to talk</strong>Consultations planned so questions are welcome.</span></li>
+        <li>{{icon:i-route}}<span><strong>One connected plan</strong>Departments share notes and plan together.</span></li>
+      </ul>
+      <a class="btn btn--outline" href="about.html">Discover Our Hospital {{icon:i-arrow:icon icon--sm}}</a>
+    </div>
+  </div>
+</section>
+
+<!-- E. Specialities -->
+<section class="section section--grey" aria-labelledby="dept-title">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <div>
+        <p class="eyebrow">Specialities and departments</p>
+        <h2 id="dept-title">Expert care across the specialities families need most.</h2>
+      </div>
+      <p class="lead">Each department is led by consultants in that field, with access to the diagnostic support and colleagues needed to plan your care in one place.</p>
+    </div>
+    <ul class="dept-grid">{{@dept-cards}}
+    </ul>
+    <div class="note">{{icon:i-info:icon icon--sm}}<p>Departments shown are a representative list for this website concept and should be confirmed with the hospital's clinical team before launch.</p></div>
+  </div>
+</section>
+
+<!-- F. Why choose us -->
+<section class="section section--navy why" aria-labelledby="why-title">
+  <svg class="why__petal" viewBox="0 0 40 40" aria-hidden="true"><use href="#logo-mark"></use></svg>
+  <div class="container why__grid">
+    <div class="why__intro reveal">
+      <p class="eyebrow">Why patients choose us</p>
+      <h2 id="why-title">Care that puts you at the centre of every decision.</h2>
+      <p class="lead">Being unwell is stressful enough. We focus on the things that make a hospital visit easier: being heard, being informed and knowing who to ask.</p>
+      <div class="why__media">{{img:why:half}}</div>
+    </div>
+    <ol class="why__list">
+      <li class="why__item reveal"><h3>Patient-first approach</h3><p>Your concerns, preferences and questions shape your plan of care. We explain options and respect your choices.</p></li>
+      <li class="why__item reveal" style="--d:1"><h3>Experienced medical professionals</h3><p>Consultants and nursing teams who work within their specialities and keep learning as medicine moves forward.</p></li>
+      <li class="why__item reveal"><h3>Coordinated patient care</h3><p>When more than one department is involved, your doctors plan together so your care feels like one journey.</p></li>
+      <li class="why__item reveal" style="--d:1"><h3>Modern healthcare environment</h3><p>Clean, calm and accessible spaces designed with patient comfort, privacy and dignity in mind.</p></li>
+      <li class="why__item reveal"><h3>Clear communication</h3><p>Plain-language explanations, written summaries where helpful, and time for your family's questions.</p></li>
+      <li class="why__item reveal" style="--d:1"><h3>Convenient appointment enquiries</h3><p>Request an appointment online or by phone, and our team will contact you to confirm a suitable time.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- G. Doctors -->
+<section class="section" aria-labelledby="doctors-title">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <div>
+        <p class="eyebrow">Our doctors</p>
+        <h2 id="doctors-title">Meet the consultants who will care for you.</h2>
+      </div>
+      <div>
+        <p class="lead">Browse consultants by department and request an appointment with the specialist who fits your concern.</p>
+      </div>
+    </div>
+    <ul class="doc-grid doc-grid--rail">{{@doctor-cards:4}}
+    </ul>
+    <div class="section-foot">
+      <a class="btn btn--primary" href="doctors.html">Meet Our Doctors {{icon:i-arrow:icon icon--sm}}</a>
+    </div>
+  </div>
+</section>
+
+<!-- H. Facilities -->
+<section class="section section--mint" aria-labelledby="facilities-title">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <div>
+        <p class="eyebrow">Facilities and environment</p>
+        <h2 id="facilities-title">Spaces designed for calm, comfort and privacy.</h2>
+      </div>
+      <p class="lead">From the moment you arrive, our spaces are planned to make each step of your visit simpler and more comfortable for patients and the people with them.</p>
+    </div>
+    <ul class="gallery">
+      <li class="gallery__item gallery__item--lead reveal"><figure>{{img:reception:half}}<figcaption>Reception<span>Help with registration, directions and appointments</span></figcaption></figure></li>
+      <li class="gallery__item reveal" style="--d:1"><figure>{{img:room:third}}<figcaption>Patient rooms<span>Rest and recovery</span></figcaption></figure></li>
+      <li class="gallery__item reveal" style="--d:2"><figure>{{img:consultRoom:third}}<figcaption>Consultation rooms<span>Private, unhurried appointments</span></figcaption></figure></li>
+      <li class="gallery__item reveal" style="--d:1"><figure>{{img:diagnostics:third}}<figcaption>Diagnostic facilities<span>Tests requested by your doctor</span></figcaption></figure></li>
+      <li class="gallery__item reveal" style="--d:2"><figure>{{img:waiting:third}}<figcaption>Waiting areas<span>Comfortable seating for families</span></figcaption></figure></li>
+    </ul>
+    <div class="note">{{icon:i-info:icon icon--sm}}<p>Representative photography. Each image area is ready to be replaced with photographs of the hospital's own facilities.</p></div>
+  </div>
+</section>
+
+<!-- I. Appointment CTA -->
+<section class="section" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta-band reveal">
+      <svg class="cta-band__petal" viewBox="0 0 40 40" aria-hidden="true"><use href="#logo-mark"></use></svg>
+      <div class="cta-band__grid">
+        <div>
+          <p class="eyebrow eyebrow--light">Appointments</p>
+          <h2 id="cta-title">Your Next Step Towards Better Health Starts Here.</h2>
+          <p>Tell us what you need and when suits you. Our appointments team will get in touch to confirm a time with the right specialist.</p>
+        </div>
+        <div class="cta-band__side">
+          <div class="btn-row">
+            <a class="btn btn--light" href="appointment.html">Book an Appointment {{icon:i-arrow:icon icon--sm}}</a>
+            <a class="btn btn--ghost-light" href="contact.html">Contact Our Team</a>
+          </div>
+          <p class="cta-band__contact">{{icon:i-phone}}<span>Prefer to call? Appointments desk<br>{{tel:appointmentsPhone}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- J. Patient information -->
+<section class="section section--grey" aria-labelledby="pi-title">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <div>
+        <p class="eyebrow">Patient information</p>
+        <h2 id="pi-title">Everything you need before you visit.</h2>
+      </div>
+      <p class="lead">Practical guidance for patients, families and visitors, so your time at the hospital is as straightforward as possible.</p>
+    </div>
+    <ul class="info-grid">
+      <li class="info-card reveal"><a href="patient-information.html#preparing"><span class="icon-wrap">{{icon:i-file}}</span><h3>Preparing for your visit</h3><p>What to bring, when to arrive and how to make the most of your consultation.</p><span class="link-arrow">Read guidance {{icon:i-arrow:icon icon--sm}}</span></a></li>
+      <li class="info-card reveal" style="--d:1"><a href="patient-information.html#appointments"><span class="icon-wrap">{{icon:i-calendar}}</span><h3>Appointment information</h3><p>How to request, change or cancel an appointment, and what happens next.</p><span class="link-arrow">Read guidance {{icon:i-arrow:icon icon--sm}}</span></a></li>
+      <li class="info-card reveal" style="--d:2"><a href="patient-information.html#visitors"><span class="icon-wrap">{{icon:i-team}}</span><h3>Patient and visitor guidelines</h3><p>Visiting hours and simple ways to help keep every patient safe and rested.</p><span class="link-arrow">Read guidance {{icon:i-arrow:icon icon--sm}}</span></a></li>
+      <li class="info-card reveal" style="--d:3"><a href="faq.html"><span class="icon-wrap">{{icon:i-chat}}</span><h3>Frequently asked questions</h3><p>Answers to common questions about visits, departments and contacting us.</p><span class="link-arrow">See all questions {{icon:i-arrow:icon icon--sm}}</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- K. Visit journey (shown in place of testimonials until approved patient stories are supplied) -->
+<section class="section section--mint" aria-labelledby="journey-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Your visit, step by step</p>
+      <h2 id="journey-title">What to expect when you come to see us.</h2>
+    </div>
+    <ol class="journey">
+      <li class="journey__step reveal"><h3>Request an appointment</h3><p>Send an enquiry online or call the appointments desk with your preferred department and time.</p></li>
+      <li class="journey__step reveal" style="--d:1"><h3>Receive confirmation</h3><p>Our team contacts you to confirm the doctor, date and time, and anything to bring.</p></li>
+      <li class="journey__step reveal" style="--d:2"><h3>Arrive and register</h3><p>Come 15 minutes early. Reception will help you register and guide you to the department.</p></li>
+      <li class="journey__step reveal" style="--d:3"><h3>Consultation and next steps</h3><p>Your doctor explains findings and options, and you leave knowing what happens next.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- L. FAQ -->
+<section class="section" aria-labelledby="faq-title">
+  <div class="container faq-layout">
+    <div class="faq-layout__aside">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-title">Frequently asked questions.</h2>
+      <p class="lead">Quick answers about appointments, visiting and finding your way around.</p>
+      <div class="faq-help">
+        <h3>Still have a question?</h3>
+        <p>Our team can help with appointments, directions and general enquiries.</p>
+        <a class="link-arrow" href="contact.html">Contact us {{icon:i-arrow:icon icon--sm}}</a>
+      </div>
+    </div>
+    <div class="accordion" data-accordion>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">How do I book an appointment?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="faq-1" role="region" aria-labelledby="faq-1-btn"><div><div class="accordion__panel-inner"><p>You can request an appointment using our <a href="appointment.html">online appointment form</a> or by calling the appointments desk on {{appointmentsPhone.display}}. Our team will contact you to confirm the date, time and consultant. An appointment is confirmed only once you hear back from us.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">What are the hospital visiting hours?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div><div class="accordion__panel-inner"><p>General visiting hours are {{hours.visiting}}. Some areas may have different arrangements to protect patients who need extra rest. Please check with the ward team or read our <a href="patient-information.html#visitors">visitor guidelines</a> before you come.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">How do I know which department I need?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div><div class="accordion__panel-inner"><p>Browse our <a href="specialities.html">specialities</a> to see the kinds of concerns each department looks after. If you are still unsure, choose "Not sure" on the appointment form or call us, and our team will help direct you. General Medicine is often a good starting point for adults.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">How should I prepare for my consultation?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><div class="accordion__panel-inner"><p>Bring a photo ID, any previous prescriptions, test reports and a list of medicines you take. It helps to write down your symptoms and questions beforehand. See <a href="patient-information.html#preparing">preparing for your visit</a> for a full checklist.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">How can I contact the hospital?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div><div class="accordion__panel-inner"><p>Call our main line on {{phone.display}}, email <a href="mailto:{{email}}">{{email}}</a> or use the <a href="contact.html">contact form</a>. For a medical emergency, call 112 or go to the nearest emergency department.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>

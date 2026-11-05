@@ -1,0 +1,166 @@
+<!--page {"title": "Book an Appointment | WeCare Hospital", "description": "Request an appointment with a specialist at WeCare Hospital. Choose a department and preferred time, and our team will contact you to confirm.", "nav": "appointment"} -->
+<section class="page-hero page-hero--plain" aria-labelledby="page-title">
+  {{> page-hero-petal}}
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Book an Appointment</li></ol></nav>
+    <div class="page-hero__grid">
+      <div>
+        <p class="eyebrow">Appointments</p>
+        <h1 id="page-title">Request an appointment.</h1>
+        <p class="lead">Tell us who the appointment is for, which department you need and when suits you. Our appointments team will contact you to confirm the details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-label="Appointment request">
+  <div class="container form-layout">
+    <div class="form-card">
+      <form id="appointment-form" data-enquiry data-endpoint="{{forms.endpoint}}" data-wa="{{whatsapp.number}}" data-mailto="{{appointmentsEmail}}" data-subject="Appointment request" aria-describedby="appt-intro" novalidate>
+        <div class="form-card__head">
+          <h2>Appointment enquiry</h2>
+          <p id="appt-intro">Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+        </div>
+
+        {{> form-alerts}}
+
+        <fieldset>
+          <legend><span class="step-num" aria-hidden="true">1</span> Who is the appointment for?</legend>
+          <div class="field" style="margin-bottom:1.25rem">
+            <span class="field__label" id="appt-for-label">Patient</span>
+            <div class="radio-group" role="radiogroup" aria-labelledby="appt-for-label">
+              <label class="radio-tile"><input type="radio" name="patientType" id="appt-for-self" value="self" checked data-summary-label="Appointment for" data-summary-value="Myself"><span>Myself</span></label>
+              <label class="radio-tile"><input type="radio" name="patientType" id="appt-for-family" value="family" data-summary-label="Appointment for" data-summary-value="A family member"><span>A family member</span></label>
+              <label class="radio-tile"><input type="radio" name="patientType" id="appt-for-child" value="child" data-summary-label="Appointment for" data-summary-value="A child"><span>A child</span></label>
+            </div>
+          </div>
+          <div class="field-grid field-grid--2">
+            <div class="field">
+              <label for="appt-name">Patient's full name<span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="appt-name" name="name" autocomplete="name" required data-validate="required name" data-summary-label="Patient name" data-error-summary="Enter the patient's full name" aria-describedby="appt-name-err">
+              <p class="field__error" id="appt-name-err">{{icon:i-alert}} Enter the patient's full name using letters only.</p>
+            </div>
+            <div class="field">
+              <label for="appt-age">Age <span class="opt">(optional)</span></label>
+              <input type="number" id="appt-age" name="age" inputmode="numeric" min="0" max="120" data-validate="age" data-summary-label="Age" data-error-summary="Enter an age between 0 and 120" aria-describedby="appt-age-err">
+              <p class="field__error" id="appt-age-err">{{icon:i-alert}} Enter an age between 0 and 120.</p>
+            </div>
+            <div class="field">
+              <label for="appt-phone">Mobile number<span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="appt-phone" name="phone" autocomplete="tel" inputmode="tel" required placeholder="98765 43210" data-validate="required phone" data-summary-label="Mobile" data-error-summary="Enter a valid 10-digit mobile number" aria-describedby="appt-phone-hint appt-phone-err">
+              <p class="field__hint" id="appt-phone-hint">We will call this number to confirm your appointment.</p>
+              <p class="field__error" id="appt-phone-err">{{icon:i-alert}} Enter a valid 10-digit Indian mobile number.</p>
+            </div>
+            <div class="field">
+              <label for="appt-email">Email <span class="opt">(optional)</span></label>
+              <input type="email" id="appt-email" name="email" autocomplete="email" data-validate="email" data-summary-label="Email" data-error-summary="Enter a valid email address" aria-describedby="appt-email-err">
+              <p class="field__error" id="appt-email-err">{{icon:i-alert}} Enter an email address in the format name@example.com.</p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="step-num" aria-hidden="true">2</span> Appointment preferences</legend>
+          <div class="field-grid field-grid--2">
+            <div class="field">
+              <label for="appt-department">Department<span class="req" aria-hidden="true">*</span></label>
+              <select id="appt-department" name="department" required data-validate="required" data-summary-label="Department" data-error-summary="Choose a department" aria-describedby="appt-department-err">
+                <option value="">Choose a department</option>
+                {{@dept-options}}
+                <option value="not-sure">Not sure, please advise me</option>
+              </select>
+              <p class="field__error" id="appt-department-err">{{icon:i-alert}} Choose a department, or select "Not sure".</p>
+            </div>
+            <div class="field">
+              <label for="appt-doctor">Preferred doctor <span class="opt">(optional)</span></label>
+              <input type="text" id="appt-doctor" name="doctor" data-summary-label="Preferred doctor" placeholder="Any available consultant">
+            </div>
+            <div class="field">
+              <label for="appt-date">Preferred date<span class="req" aria-hidden="true">*</span></label>
+              <input type="date" id="appt-date" name="date" required data-validate="futureDate" data-summary-label="Preferred date" data-error-summary="Choose a preferred date from tomorrow onwards" aria-describedby="appt-date-err">
+              <p class="field__error" id="appt-date-err">{{icon:i-alert}} Choose a date from tomorrow onwards.</p>
+            </div>
+            <div class="field">
+              <label for="appt-visit">Type of visit</label>
+              <select id="appt-visit" name="visitType" data-summary-label="Type of visit">
+                <option value="new">First consultation</option>
+                <option value="follow-up">Follow-up consultation</option>
+                <option value="second-opinion">Second opinion</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <span class="field__label" id="appt-time-label">Preferred time<span class="req" aria-hidden="true">*</span></span>
+              <div class="radio-group" role="radiogroup" aria-labelledby="appt-time-label" aria-describedby="appt-time-err">
+                <label class="radio-tile"><input type="radio" name="time" id="appt-time-am" value="morning" data-validate="choice" data-summary-label="Preferred time" data-summary-value="Morning" data-error-summary="Choose a preferred time of day"><span>Morning<small>8 am to 12 pm</small></span></label>
+                <label class="radio-tile"><input type="radio" name="time" id="appt-time-pm" value="afternoon" data-validate="choice" data-summary-label="Preferred time" data-summary-value="Afternoon"><span>Afternoon<small>12 to 4 pm</small></span></label>
+                <label class="radio-tile"><input type="radio" name="time" id="appt-time-eve" value="evening" data-validate="choice" data-summary-label="Preferred time" data-summary-value="Evening"><span>Evening<small>4 to 8 pm</small></span></label>
+              </div>
+              <p class="field__error" id="appt-time-err">{{icon:i-alert}} Choose a preferred time of day.</p>
+            </div>
+            <div class="field field--full">
+              <label for="appt-notes">Anything we should know? <span class="opt">(optional)</span></label>
+              <textarea id="appt-notes" name="notes" maxlength="500" data-summary-label="Notes" aria-describedby="appt-notes-hint"></textarea>
+              <p class="field__hint" id="appt-notes-hint">For example, access needs or a preferred language. Please do not include detailed medical information.</p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="sr-only">Consent</legend>
+          <div class="field">
+            <label class="check" for="appt-consent"><input type="checkbox" id="appt-consent" name="consent" value="yes" required data-validate="checked" data-error-summary="Confirm that we may contact you" aria-describedby="appt-consent-err"><span>I agree that {{name}} may contact me by phone or email about this appointment request, as described in the <a href="privacy-policy.html">Privacy Policy</a>.<span class="req" aria-hidden="true">*</span></span></label>
+            <p class="field__error" id="appt-consent-err">{{icon:i-alert}} Please confirm that we may contact you about this request.</p>
+          </div>
+        </fieldset>
+
+        <div class="form-alert form-alert--success" data-form-success tabindex="-1" role="status" hidden>
+          {{icon:i-check}}
+          <div>
+            <div data-state="failed" hidden>
+              <h3>We could not send your request just now</h3>
+              <p>Please send it on WhatsApp instead, or call us on {{phone.display}}.</p>
+            </div>
+            <div data-state="send">
+              <h3>Your request is ready to send</h3>
+              <p>Choose how to send it. WhatsApp or your email app opens with everything filled in, so you only need to press send. They will call you on the number you gave to confirm the date, time and consultant. Your appointment is confirmed only when they do.</p>
+              <div class="preview-summary"><dl data-summary></dl></div>
+              <div class="btn-row send-row">
+                {{#if whatsapp.verified}}<a class="btn btn--whatsapp" data-send="whatsapp" href="#" target="_blank" rel="noopener">{{icon:i-whatsapp:icon icon--sm}} Send on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>{{/if}}
+                {{#if emailVerified}}<a class="btn btn--outline" data-send="email" href="#">{{icon:i-mail:icon icon--sm}} Send by email</a>{{/if}}
+              </div>
+            </div>
+            <div data-state="received" hidden>
+              <h3>Thank you, we have received your request</h3>
+              <p>Our appointments team has your details. They will call you on the number you gave to confirm the date, time and consultant. Your appointment is confirmed only when they do.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn--primary">Continue {{icon:i-arrow:icon icon--sm}}</button>
+          <button type="reset" class="btn btn--outline">Clear form</button>
+          <p class="small muted">For a medical emergency, call 112. Do not use this form for urgent care.</p>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-layout__aside">
+      <div class="aside-card">
+        <h2>What happens next</h2>
+        <ol class="aside-steps">
+          <li><strong>We review your request</strong>Our appointments team checks the department and timing you asked for.</li>
+          <li><strong>We call to confirm</strong>We contact you to agree the date, time and consultant. Your appointment is confirmed only at this point.</li>
+          <li><strong>You receive the details</strong>We share what to bring and where to go on the day.</li>
+        </ol>
+      </div>
+      <div class="aside-contact">
+        <h3>Prefer to speak to someone?</h3>
+        <ul class="contact-lines">
+          <li>{{icon:i-phone}}<span><strong>Appointments desk</strong>{{tel:appointmentsPhone}}</span></li>
+          <li>{{icon:i-mail}}<span><strong>Email</strong><a href="mailto:{{appointmentsEmail}}">{{appointmentsEmail}}</a></span></li>
+          <li>{{icon:i-clock}}<span><strong>Outpatient hours</strong>{{hours.opd}}<br>{{hours.opdSunday}}</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+<div class="topbar" role="region" aria-label="Hospital contact information">
+  <div class="container topbar__inner">
+    <ul class="topbar__list">
+      <li>{{icon:i-phone:icon icon--xs}} <span class="sr-only">Telephone:</span>{{tel:phone}}</li>
+      <li class="topbar__hide-md">{{icon:i-clock:icon icon--xs}} <span>{{hours.visitingShort}}</span></li>
+      {{#if emergency.verified}}<li class="topbar__emergency">Emergency: {{tel:emergency}}</li>{{/if}}
+    </ul>
+    <div class="topbar__right">
+      <a class="topbar__link" href="mailto:{{email}}">{{icon:i-mail:icon icon--xs}} {{email}}</a>
+      <div class="topbar__tools">
+        <label class="lang-select">{{icon:i-globe:icon icon--xs}}<span class="sr-only">Language</span>
+          <select data-lang-select aria-label="Language">
+            <option value="en" lang="en">English</option>
+            <option value="hi" lang="hi">हिन्दी</option>
+            <option value="kn" lang="kn">ಕನ್ನಡ</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="logo" href="index.html" aria-label="{{name}}, home">{{> logo}}</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html" {{nav:home}}>Home</a></li>
+        <li><a class="nav__link" href="about.html" {{nav:about}}>About Us</a></li>
+        <li><a class="nav__link" href="specialities.html" {{nav:specialities}}>Specialities</a></li>
+        <li><a class="nav__link" href="doctors.html" {{nav:doctors}}>Our Doctors</a></li>
+        <li><a class="nav__link" href="patient-information.html" {{nav:patients}}>Patient Information</a></li>
+        <li><a class="nav__link" href="contact.html" {{nav:contact}}>Contact</a></li>
+      </ul>
+      <div class="nav__mobile-extra">
+        <a class="btn btn--primary btn--block" href="appointment.html">Book an Appointment</a>
+        <p class="nav__mobile-contact">{{icon:i-phone:icon icon--xs}} {{tel:phone}}<br>{{icon:i-clock:icon icon--xs}} OPD {{hours.opd}}</p>
+      </div>
+    </nav>
+    <div class="site-header__actions">
+      <a class="btn btn--primary btn--header" href="appointment.html" {{nav:appointment}}>Book an Appointment</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only" data-nav-label>Open menu</span>
+        <svg class="icon nav-toggle__open" aria-hidden="true"><use href="#i-menu"></use></svg>
+        <svg class="icon nav-toggle__close" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>

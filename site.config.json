@@ -1,0 +1,55 @@
+{
+  "_readme": "Edit hospital details here, then run `node build.mjs`. Set a value's `verified` flag to true only after the hospital has confirmed it. Unverified phone numbers are shown as text without click-to-call; the emergency line is hidden entirely until verified. No street address is shown on the site; add an `address` block and location sections back only once the hospital confirms it. Set emailVerified to true once the email addresses are real, to show the \"Send by email\" option on forms.",
+  "name": "WeCare Hospital",
+  "shortName": "WeCare",
+  "descriptor": "Multispeciality Hospital",
+  "tagline": "Compassionate care. Better health.",
+  "siteUrl": "https://www.example-hospital.in",
+  "phone": {
+    "display": "+91 81483 08344",
+    "tel": "+918148308344",
+    "verified": true
+  },
+  "appointmentsPhone": {
+    "display": "+91 81483 08344",
+    "tel": "+918148308344",
+    "verified": true
+  },
+  "emergency": {
+    "display": "",
+    "tel": "",
+    "verified": false
+  },
+  "whatsapp": {
+    "display": "+91 81483 08344",
+    "number": "918148308344",
+    "verified": true
+  },
+  "email": "care@example-hospital.in",
+  "appointmentsEmail": "appointments@example-hospital.in",
+  "hours": {
+    "opd": "Mon to Sat, 8:00 am to 8:00 pm",
+    "opdSunday": "Sunday, 9:00 am to 1:00 pm",
+    "visiting": "4:00 pm to 7:00 pm daily",
+    "visitingShort": "Visiting hours 4 to 7 pm"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "linkedin": "https://www.linkedin.com/",
+    "youtube": "https://www.youtube.com/"
+  },
+  "agency": {
+    "name": "Vajha Agency"
+  },
+  "year": "2026",
+  "wordmark": {
+    "lead": "We",
+    "accent": "Care"
+  },
+  "forms": {
+    "_readme": "Leave endpoint empty to send enquiries through WhatsApp or email from the visitor's own device. To collect them in a Google Sheet, deploy scripts/google-sheet-endpoint.gs as a web app and paste its URL here.",
+    "endpoint": ""
+  },
+  "emailVerified": false
+}

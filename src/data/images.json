@@ -1,0 +1,115 @@
+{
+  "_readme": "Photographs are free-licence images from Unsplash (unsplash.com/license), self-hosted in assets/img/photos (800px and 1400px versions). They are representative only: replace them with the hospital's own photography before launch. `pos` is the CSS object-position used for cropping.",
+  "hero": {
+    "id": "photo-1758691462863-9e1b8a863140",
+    "alt": "A doctor listening to a patient during a consultation in a bright clinic office",
+    "credit": "Vitaly Gariev",
+    "pos": "76% 50%",
+    "local": "assets/img/photos/hero"
+  },
+  "intro": {
+    "id": "photo-1758691463000-08b98131daf3",
+    "alt": "A doctor showing a patient a medical scan on a tablet",
+    "credit": "Vitaly Gariev",
+    "pos": "35% 50%",
+    "local": "assets/img/photos/intro"
+  },
+  "introInset": {
+    "id": "photo-1576091160550-2173dba999ef",
+    "alt": "A clinician's desk with a laptop and a stethoscope",
+    "credit": "National Cancer Institute",
+    "pos": "50% 50%",
+    "local": "assets/img/photos/introInset"
+  },
+  "why": {
+    "id": "photo-1666214278797-b2cc1b12be76",
+    "alt": "A clinician explaining a scan procedure to a patient beside imaging equipment",
+    "credit": "Accuray",
+    "pos": "50% 45%",
+    "local": "assets/img/photos/why"
+  },
+  "reception": {
+    "id": "photo-1519494026892-80bbd2d6fd0d",
+    "alt": "A bright hospital reception and lobby area",
+    "credit": "Martha Dominguez de Gouveia",
+    "pos": "50% 50%",
+    "local": "assets/img/photos/reception"
+  },
+  "room": {
+    "id": "photo-1778151270902-cb0ca572f2ee",
+    "alt": "A clean patient room with an adjustable hospital bed",
+    "credit": "Irshad Pathan",
+    "pos": "50% 50%",
+    "local": "assets/img/photos/room"
+  },
+  "consultRoom": {
+    "id": "photo-1766299892549-b56b257d1ddd",
+    "alt": "Diagnostic instruments mounted on the wall of a consultation room",
+    "credit": "Brian Wangenheim",
+    "pos": "50% 50%",
+    "local": "assets/img/photos/consultRoom"
+  },
+  "diagnostics": {
+    "id": "photo-1606206591513-adbfbdd7a177",
+    "alt": "Rows of blood sample tubes in a laboratory rack",
+    "credit": "Testalize.me",
+    "pos": "50% 50%",
+    "local": "assets/img/photos/diagnostics"
+  },
+  "waiting": {
+    "id": "photo-1706458315547-1a60ada6d278",
+    "alt": "A quiet waiting area with a row of chairs beside large windows",
+    "credit": "Hermann Wittekopf",
+    "pos": "50% 50%",
+    "local": "assets/img/photos/waiting"
+  },
+  "about": {
+    "id": "photo-1631217868264-e5b90bb7e133",
+    "alt": "A smiling doctor in a white coat talking to a patient in a clinic",
+    "credit": "National Cancer Institute",
+    "pos": "50% 40%",
+    "local": "assets/img/photos/about"
+  },
+  "aboutCorridor": {
+    "id": "photo-1777269749032-d8d458ae594d",
+    "alt": "A calm hospital corridor with benches and consultation room doors",
+    "credit": "Tasha Kostyuk",
+    "pos": "50% 50%",
+    "local": "assets/img/photos/aboutCorridor"
+  },
+  "specialities": {
+    "id": "photo-1758691462284-9eeec33fb0e7",
+    "alt": "A doctor gently examining a child with a stethoscope",
+    "credit": "Vitaly Gariev",
+    "pos": "50% 40%",
+    "local": "assets/img/photos/specialities"
+  },
+  "doctors": {
+    "id": "photo-1758691461957-474a7686e388",
+    "alt": "A doctor in conversation with a patient in a modern consultation room",
+    "credit": "Vitaly Gariev",
+    "pos": "50% 45%",
+    "local": "assets/img/photos/doctors"
+  },
+  "patients": {
+    "id": "photo-1581982231900-6a1a46b744c9",
+    "alt": "A hospital waiting area with upholstered chairs",
+    "credit": "smallbox",
+    "pos": "50% 50%",
+    "local": "assets/img/photos/patients"
+  },
+  "appointment": {
+    "id": "photo-1758691463198-dc663b8a64e4",
+    "alt": "A doctor writing notes while a patient sits opposite",
+    "credit": "Vitaly Gariev",
+    "pos": "50% 50%",
+    "local": "assets/img/photos/appointment"
+  },
+  "contact": {
+    "id": "photo-1764727291644-5dcb0b1a0375",
+    "alt": "A hospital reception desk with a Reception sign overhead",
+    "credit": "Malcolm Choong",
+    "pos": "50% 50%",
+    "local": "assets/img/photos/contact"
+  }
+}

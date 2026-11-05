@@ -1,0 +1,54 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="index.html" aria-label="{{name}}, home">{{> logo}}</a>
+        <p class="footer__about">A multispeciality hospital built around unhurried consultations, coordinated care between departments and clear communication with patients and families.</p>
+        <ul class="footer__social" aria-label="Social media">
+          <li><a href="{{social.facebook}}" rel="noopener" target="_blank" aria-label="Facebook (opens in a new tab)">{{icon:i-facebook}}</a></li>
+          <li><a href="{{social.instagram}}" rel="noopener" target="_blank" aria-label="Instagram (opens in a new tab)">{{icon:i-instagram}}</a></li>
+          <li><a href="{{social.linkedin}}" rel="noopener" target="_blank" aria-label="LinkedIn (opens in a new tab)">{{icon:i-linkedin}}</a></li>
+          <li><a href="{{social.youtube}}" rel="noopener" target="_blank" aria-label="YouTube (opens in a new tab)">{{icon:i-youtube}}</a></li>
+        </ul>
+      </div>
+      <nav class="footer__col" aria-labelledby="f-nav">
+        <h2 class="footer__heading" id="f-nav">Hospital</h2>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="specialities.html">Specialities</a></li>
+          <li><a href="doctors.html">Our Doctors</a></li>
+          <li><a href="patient-information.html">Patient Information</a></li>
+          <li><a href="health-packages.html">Health Packages</a></li>
+          <li><a href="insurance.html">Insurance and Billing</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="appointment.html">Book an Appointment</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__col" aria-labelledby="f-dept">
+        <h2 class="footer__heading" id="f-dept">Departments</h2>
+        <ul>{{@dept-footer}}</ul>
+      </nav>
+      <div class="footer__col footer__contact">
+        <h2 class="footer__heading">Contact us</h2>
+        <address>
+          <p>{{icon:i-phone:icon icon--xs}}<span>{{tel:phone}}</span></p>
+          {{#if whatsapp.verified}}<p>{{icon:i-whatsapp:icon icon--xs}}<span><a href="https://wa.me/{{whatsapp.number}}" target="_blank" rel="noopener">WhatsApp {{whatsapp.display}}<span class="sr-only"> (opens in a new tab)</span></a></span></p>{{/if}}
+          <p>{{icon:i-mail:icon icon--xs}}<span><a href="mailto:{{email}}">{{email}}</a></span></p>
+          <p>{{icon:i-clock:icon icon--xs}}<span>OPD: {{hours.opd}}<br>{{hours.opdSunday}}</span></p>
+        </address>
+      </div>
+    </div>
+    <div class="footer__notice">
+      {{icon:i-info:icon icon--sm}}
+      <p>For a medical emergency, call <strong>112</strong> (India's national emergency number) or go to the nearest emergency department. Online forms on this website are not monitored for urgent needs.</p>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; {{year}} {{name}}. All rights reserved.</p>
+      <ul class="footer__legal">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms and Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

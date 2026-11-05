@@ -1,0 +1,148 @@
+<!--page {"title": "Contact Us | WeCare Hospital", "description": "Contact WeCare Hospital. Call, WhatsApp or email us, check outpatient and visiting hours, or send us a message.", "nav": "contact"} -->
+<section class="page-hero" aria-labelledby="page-title">
+  {{> page-hero-petal}}
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Contact Us</li></ol></nav>
+    <div class="page-hero__grid">
+      <div>
+        <p class="eyebrow">Contact us</p>
+        <h1 id="page-title">We are here to help.</h1>
+        <p class="lead">Reach the right team for appointments and general enquiries. For anything urgent, please call rather than writing to us.</p>
+      </div>
+      <div class="page-hero__media">{{img:contact:half:eager}}</div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-label="Contact details">
+  <div class="container">
+    <ul class="contact-cards">
+      <li class="contact-card reveal"><span class="icon-wrap">{{icon:i-phone}}</span><h2>Call us</h2>{{tel:phone:big}}<p>Appointments and general enquiries</p></li>
+      <li class="contact-card reveal" style="--d:1"><span class="icon-wrap">{{icon:i-whatsapp}}</span><h2>WhatsApp</h2><a class="big" href="https://wa.me/{{whatsapp.number}}" target="_blank" rel="noopener">Chat with us<span class="sr-only"> on WhatsApp (opens in a new tab)</span></a><p>Message {{whatsapp.display}} for appointments and questions</p></li>
+      <li class="contact-card reveal" style="--d:2"><span class="icon-wrap">{{icon:i-mail}}</span><h2>Email</h2><a class="big" href="mailto:{{email}}">{{email}}</a><p>We reply during outpatient hours</p></li>
+      <li class="contact-card reveal" style="--d:3"><span class="icon-wrap">{{icon:i-alert}}</span><h2>Medical emergency</h2><span class="big">Call 112</span><p>India's national emergency number, or go to the nearest emergency department</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--tight" id="hours" aria-labelledby="hours-title">
+  <div class="container">
+    <div class="location location--hours">
+      <div class="location__info">
+        <p class="eyebrow">When we are open</p>
+        <h2 id="hours-title">Hours and visiting</h2>
+        <table class="hours-table">
+          <caption class="sr-only">Opening hours</caption>
+          <tbody>
+            <tr><th scope="row">Outpatient consultations</th><td>{{hours.opd}}<br>{{hours.opdSunday}}</td></tr>
+            <tr><th scope="row">Visiting hours</th><td>{{hours.visiting}}</td></tr>
+            <tr><th scope="row">Appointments and enquiries</th><td>{{tel:appointmentsPhone}}</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="location__info location__aside">
+        <h3>Planning your visit</h3>
+        <p class="muted">Please call us before your visit for directions and parking information. Arrive about 15 minutes before your appointment to allow time for registration.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="appointment.html">Request an appointment {{icon:i-arrow:icon icon--sm}}</a>
+          <a class="btn btn--outline" href="patient-information.html#preparing">Preparing for your visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="msg-title">
+  <div class="container form-layout">
+    <div class="form-card">
+      <form id="contact-form" data-enquiry data-endpoint="{{forms.endpoint}}" data-wa="{{whatsapp.number}}" data-mailto="{{email}}" data-subject="Website enquiry" aria-describedby="contact-intro" novalidate>
+        <div class="form-card__head">
+          <h2 id="msg-title">Send us a message</h2>
+          <p id="contact-intro">For general enquiries, feedback or help planning a visit. Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+        </div>
+
+        {{> form-alerts}}
+
+        <div class="field-grid field-grid--2">
+          <div class="field">
+            <label for="c-name">Your name<span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="c-name" name="name" autocomplete="name" required data-validate="required name" data-summary-label="Name" data-error-summary="Enter your name" aria-describedby="c-name-err">
+            <p class="field__error" id="c-name-err">{{icon:i-alert}} Enter your name using letters only.</p>
+          </div>
+          <div class="field">
+            <label for="c-phone">Mobile number<span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="c-phone" name="phone" autocomplete="tel" inputmode="tel" required placeholder="98765 43210" data-validate="required phone" data-summary-label="Mobile" data-error-summary="Enter a valid 10-digit mobile number" aria-describedby="c-phone-err">
+            <p class="field__error" id="c-phone-err">{{icon:i-alert}} Enter a valid 10-digit Indian mobile number.</p>
+          </div>
+          <div class="field">
+            <label for="c-email">Email <span class="opt">(optional)</span></label>
+            <input type="email" id="c-email" name="email" autocomplete="email" data-validate="email" data-summary-label="Email" data-error-summary="Enter a valid email address" aria-describedby="c-email-err">
+            <p class="field__error" id="c-email-err">{{icon:i-alert}} Enter an email address in the format name@example.com.</p>
+          </div>
+          <div class="field">
+            <label for="c-topic">Topic<span class="req" aria-hidden="true">*</span></label>
+            <select id="c-topic" name="topic" required data-validate="required" data-summary-label="Topic" data-error-summary="Choose a topic" aria-describedby="c-topic-err">
+              <option value="">Choose a topic</option>
+              <option value="general">General enquiry</option>
+              <option value="appointment">Existing appointment</option>
+              <option value="visiting">Visiting a patient</option>
+              <option value="billing">Billing and insurance</option>
+              <option value="feedback">Feedback or suggestion</option>
+            </select>
+            <p class="field__error" id="c-topic-err">{{icon:i-alert}} Choose the topic closest to your message.</p>
+          </div>
+          <div class="field field--full">
+            <label for="c-message">Message<span class="req" aria-hidden="true">*</span></label>
+            <textarea id="c-message" name="message" required maxlength="1000" data-validate="required" data-summary-label="Message" data-error-summary="Write your message" aria-describedby="c-message-hint c-message-err"></textarea>
+            <p class="field__hint" id="c-message-hint">Please do not include detailed medical information.</p>
+            <p class="field__error" id="c-message-err">{{icon:i-alert}} Write a short message so we know how to help.</p>
+          </div>
+          <div class="field field--full">
+            <label class="check" for="c-consent"><input type="checkbox" id="c-consent" name="consent" value="yes" required data-validate="checked" data-error-summary="Confirm that we may reply to you" aria-describedby="c-consent-err"><span>I agree that {{name}} may contact me to respond to this message, as described in the <a href="privacy-policy.html">Privacy Policy</a>.<span class="req" aria-hidden="true">*</span></span></label>
+            <p class="field__error" id="c-consent-err">{{icon:i-alert}} Please confirm that we may reply to you.</p>
+          </div>
+        </div>
+
+        <div class="form-alert form-alert--success" data-form-success tabindex="-1" role="status" hidden style="margin-top:2rem">
+          {{icon:i-check}}
+          <div>
+            <div data-state="failed" hidden>
+              <h3>We could not send your message just now</h3>
+              <p>Please send it on WhatsApp instead, or call us on {{phone.display}}.</p>
+            </div>
+            <div data-state="send">
+              <h3>Your message is ready to send</h3>
+              <p>Choose how to send it. WhatsApp or your email app opens with everything filled in, so you only need to press send. We will reply during outpatient hours, usually within one working day.</p>
+              <div class="preview-summary"><dl data-summary></dl></div>
+              <div class="btn-row send-row">
+                {{#if whatsapp.verified}}<a class="btn btn--whatsapp" data-send="whatsapp" href="#" target="_blank" rel="noopener">{{icon:i-whatsapp:icon icon--sm}} Send on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>{{/if}}
+                {{#if emailVerified}}<a class="btn btn--outline" data-send="email" href="#">{{icon:i-mail:icon icon--sm}} Send by email</a>{{/if}}
+              </div>
+            </div>
+            <div data-state="received" hidden>
+              <h3>Thank you, we have received your message</h3>
+              <p>Our patient services team has your details. We will reply during outpatient hours, usually within one working day.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions" style="margin-top:2rem">
+          <button type="submit" class="btn btn--primary">Continue {{icon:i-arrow:icon icon--sm}}</button>
+          <p class="small muted">We aim to reply within one working day.</p>
+        </div>
+      </form>
+    </div>
+    <div class="form-layout__aside">
+      <div class="aside-card">
+        <h2>Looking for something specific?</h2>
+        <ul class="aside-links">
+          <li><a href="appointment.html">Request an appointment {{icon:i-arrow:icon icon--sm}}</a></li>
+          <li><a href="doctors.html">Find a doctor {{icon:i-arrow:icon icon--sm}}</a></li>
+          <li><a href="patient-information.html#visitors">Visiting hours and guidelines {{icon:i-arrow:icon icon--sm}}</a></li>
+          <li><a href="patient-information.html#billing">Billing and insurance {{icon:i-arrow:icon icon--sm}}</a></li>
+          <li><a href="patient-information.html#faq">Frequently asked questions {{icon:i-arrow:icon icon--sm}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

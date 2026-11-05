@@ -1,0 +1,61 @@
+<!--page {"title": "Our Doctors | Find a Consultant at WeCare Hospital", "description": "Find a consultant at WeCare Hospital. Browse doctors by department and request an appointment online.", "nav": "doctors"} -->
+<section class="page-hero" aria-labelledby="page-title">
+  {{> page-hero-petal}}
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Our Doctors</li></ol></nav>
+    <div class="page-hero__grid">
+      <div>
+        <p class="eyebrow">Our doctors</p>
+        <h1 id="page-title">Find the right consultant for you.</h1>
+        <p class="lead">Browse our consultants by department, with a direct link to request an appointment with each one.</p>
+      </div>
+      <div class="page-hero__media">{{img:doctors:half:eager}}</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="dir-title">
+  <div class="container">
+    <h2 id="dir-title" class="sr-only">Doctor directory</h2>
+    <div class="directory-tools">
+      <div>
+        <p class="label" id="filter-label">Filter by department</p>
+        <div class="chips" role="group" aria-labelledby="filter-label">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All departments</button>
+          {{@dept-chips}}
+        </div>
+      </div>
+      <div class="field">
+        <label for="doctor-search">Search by name or speciality</label>
+        <div class="search-field">{{icon:i-search:icon icon--sm}}<input type="search" id="doctor-search" placeholder="For example, cardiology" autocomplete="off"></div>
+      </div>
+    </div>
+    <p class="directory-status" data-directory-status aria-live="polite"></p>
+    <ul class="doc-grid" data-directory>{{@doctor-cards}}
+    </ul>
+    <div class="empty-state" data-directory-empty hidden>
+      <h3>No profiles match your search</h3>
+      <p>Try another department or a different search term. Our team can also help you choose a consultant.</p>
+      <button type="button" class="btn btn--outline btn--sm" data-directory-reset>Show all doctors</button>
+    </div>
+  </div>
+</section>
+
+<section class="section section--grey" aria-labelledby="choose-title">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <div>
+        <p class="eyebrow">Choosing a consultant</p>
+        <h2 id="choose-title">Help with choosing the right doctor.</h2>
+      </div>
+      <p class="lead">You can request a specific consultant, or let our appointments team match you with the right specialist for your concern.</p>
+    </div>
+    <ol class="steps-list">
+      <li class="reveal"><h3>Start with your concern</h3><p>Choose the department that fits best. If you are unsure, General Medicine or our appointments team can guide you.</p></li>
+      <li class="reveal" style="--d:1"><h3>Request a preferred doctor</h3><p>Name a consultant on the appointment form if you have one in mind, or tell us if you would like the earliest available appointment.</p></li>
+      <li class="reveal" style="--d:2"><h3>Ask about second opinions</h3><p>If you would like a second opinion on a diagnosis or treatment plan, mention it when you request your appointment.</p></li>
+    </ol>
+  </div>
+</section>
+
+{{> next-step}}

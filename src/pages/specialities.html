@@ -1,0 +1,60 @@
+<!--page {"title": "Specialities and Departments | WeCare Hospital", "description": "Explore the departments at WeCare Hospital: Cardiology, Orthopaedics, Neurology, General Medicine, Paediatrics, Obstetrics & Gynaecology, Dermatology and Gastroenterology.", "nav": "specialities"} -->
+<section class="page-hero" aria-labelledby="page-title">
+  {{> page-hero-petal}}
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Specialities</li></ol></nav>
+    <div class="page-hero__grid">
+      <div>
+        <p class="eyebrow">Specialities and departments</p>
+        <h1 id="page-title">Specialist care, coordinated in one place.</h1>
+        <p class="lead">Find the department that fits your concern, see the kinds of problems each team looks after and request an appointment with the right specialist.</p>
+      </div>
+      <div class="page-hero__media">{{img:specialities:half:eager}}</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="Departments">
+  <div class="container spec-layout">
+    <nav class="spec-index" aria-label="Jump to a department">
+      <p class="label">Departments</p>
+      <ul data-scrollspy>{{@dept-index}}
+      </ul>
+    </nav>
+    <div>
+      <div class="dept-list">{{@dept-detail}}
+      </div>
+      <div class="note note--boxed">{{icon:i-info:icon icon--sm}}<p>Department names and descriptions are sample content for this website concept. Each listing should be reviewed and approved by the hospital's clinical team before launch. Descriptions are general information and not medical advice.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="guide-title">
+  <div class="container">
+    <div class="guide-box reveal">
+      <div>
+        <p class="eyebrow">Not sure where to start?</p>
+        <h2 id="guide-title">We will help you find the right department.</h2>
+        <p>If your symptoms do not fit neatly into one speciality, choose "Not sure" on the appointment form or call us. Our team will ask a few questions and arrange the most suitable first appointment, often with General Medicine.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="appointment.html?dept=not-sure">Request guidance {{icon:i-arrow:icon icon--sm}}</a>
+        <a class="btn btn--outline" href="doctors.html">Browse doctors</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--grey" aria-labelledby="sp-steps-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Seeing a specialist</p>
+      <h2 id="sp-steps-title">How a specialist appointment works.</h2>
+    </div>
+    <ol class="steps-list">
+      <li class="reveal"><h3>Choose a department</h3><p>Pick the speciality that matches your concern, or ask us to guide you. A referral letter is helpful but not always required.</p></li>
+      <li class="reveal" style="--d:1"><h3>Confirm your appointment</h3><p>Our team calls you to agree a date, time and consultant, and lets you know if any tests are needed beforehand.</p></li>
+      <li class="reveal" style="--d:2"><h3>Meet your consultant</h3><p>Your consultant reviews your history, examines you and talks through findings and next steps with you.</p></li>
+    </ol>
+  </div>
+</section>

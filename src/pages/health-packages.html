@@ -1,0 +1,119 @@
+<!--page {"title": "Health Check Packages | WeCare Hospital", "description": "Preventive health check packages at WeCare Hospital, from an essential yearly check to heart, diabetes, women's and senior citizen health checks.", "nav": "patients"} -->
+<section class="page-hero page-hero--plain" aria-labelledby="page-title">
+  {{> page-hero-petal}}
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="patient-information.html">Patient Information</a></li><li aria-current="page">Health Packages</li></ol></nav>
+    <div class="page-hero__grid">
+      <div>
+        <p class="eyebrow">Preventive health checks</p>
+        <h1 id="page-title">Health checks that help you stay ahead.</h1>
+        <p class="lead">Regular check-ups can find problems early, when they are easier to treat. Choose a package that suits your age and health, and our team will help you prepare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-label="Health check packages">
+  <div class="container">
+    <ul class="pkg-grid">
+      <li class="pkg-card reveal" style="--d:0">
+        <span class="icon-wrap">{{icon:i-package}}</span>
+        <h2 class="pkg-card__title">Essential Health Check</h2>
+        <p class="pkg-card__text">A yearly baseline for adults with no major health concerns.</p>
+        <h3 class="label">Typically includes</h3>
+        <ul class="tick-list"><li>Complete blood count</li><li>Fasting blood sugar</li><li>Lipid profile</li><li>Kidney and liver function tests</li><li>Urine routine examination</li><li>ECG</li><li>Consultation with a physician</li></ul>
+        <div class="pkg-card__actions">
+          {{#if whatsapp.verified}}<a class="btn btn--whatsapp btn--sm btn--block" href="https://wa.me/{{whatsapp.number}}?text=Hello%20WeCare%20Hospital%2C%20I%20would%20like%20to%20book%20the%20Essential%20Health%20Check." target="_blank" rel="noopener">{{icon:i-whatsapp:icon icon--sm}} Book on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>{{/if}}
+          <a class="btn btn--outline btn--sm btn--block" href="appointment.html?dept=general-medicine">Request online</a>
+        </div>
+      </li>
+      <li class="pkg-card reveal" style="--d:1">
+        <span class="icon-wrap">{{icon:i-package}}</span>
+        <h2 class="pkg-card__title">Comprehensive Health Check</h2>
+        <p class="pkg-card__text">A fuller picture for adults over 35, or anyone with a family history of lifestyle conditions.</p>
+        <h3 class="label">Typically includes</h3>
+        <ul class="tick-list"><li>Everything in the Essential Health Check</li><li>Thyroid profile and HbA1c</li><li>Vitamin D and vitamin B12</li><li>Chest X-ray</li><li>Ultrasound of the abdomen</li><li>Consultation with a physician and a dietitian</li></ul>
+        <div class="pkg-card__actions">
+          {{#if whatsapp.verified}}<a class="btn btn--whatsapp btn--sm btn--block" href="https://wa.me/{{whatsapp.number}}?text=Hello%20WeCare%20Hospital%2C%20I%20would%20like%20to%20book%20the%20Comprehensive%20Health%20Check." target="_blank" rel="noopener">{{icon:i-whatsapp:icon icon--sm}} Book on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>{{/if}}
+          <a class="btn btn--outline btn--sm btn--block" href="appointment.html?dept=general-medicine">Request online</a>
+        </div>
+      </li>
+      <li class="pkg-card reveal" style="--d:2">
+        <span class="icon-wrap">{{icon:i-package}}</span>
+        <h2 class="pkg-card__title">Heart Health Check</h2>
+        <p class="pkg-card__text">For people with risk factors such as high blood pressure, diabetes, smoking or a family history of heart disease.</p>
+        <h3 class="label">Typically includes</h3>
+        <ul class="tick-list"><li>Lipid profile and blood sugar</li><li>ECG</li><li>Echocardiogram</li><li>Treadmill test, where suitable</li><li>Consultation with a cardiologist</li></ul>
+        <div class="pkg-card__actions">
+          {{#if whatsapp.verified}}<a class="btn btn--whatsapp btn--sm btn--block" href="https://wa.me/{{whatsapp.number}}?text=Hello%20WeCare%20Hospital%2C%20I%20would%20like%20to%20book%20the%20Heart%20Health%20Check." target="_blank" rel="noopener">{{icon:i-whatsapp:icon icon--sm}} Book on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>{{/if}}
+          <a class="btn btn--outline btn--sm btn--block" href="appointment.html?dept=general-medicine">Request online</a>
+        </div>
+      </li>
+      <li class="pkg-card reveal" style="--d:0">
+        <span class="icon-wrap">{{icon:i-package}}</span>
+        <h2 class="pkg-card__title">Diabetes Care Check</h2>
+        <p class="pkg-card__text">A regular review for people living with diabetes or prediabetes.</p>
+        <h3 class="label">Typically includes</h3>
+        <ul class="tick-list"><li>Fasting and post-meal blood sugar</li><li>HbA1c</li><li>Kidney function and urine microalbumin</li><li>Eye check of the retina</li><li>Foot assessment</li><li>Consultation with a physician and a dietitian</li></ul>
+        <div class="pkg-card__actions">
+          {{#if whatsapp.verified}}<a class="btn btn--whatsapp btn--sm btn--block" href="https://wa.me/{{whatsapp.number}}?text=Hello%20WeCare%20Hospital%2C%20I%20would%20like%20to%20book%20the%20Diabetes%20Care%20Check." target="_blank" rel="noopener">{{icon:i-whatsapp:icon icon--sm}} Book on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>{{/if}}
+          <a class="btn btn--outline btn--sm btn--block" href="appointment.html?dept=general-medicine">Request online</a>
+        </div>
+      </li>
+      <li class="pkg-card reveal" style="--d:1">
+        <span class="icon-wrap">{{icon:i-package}}</span>
+        <h2 class="pkg-card__title">Women's Health Check</h2>
+        <p class="pkg-card__text">Screening and advice tailored to women at different stages of life.</p>
+        <h3 class="label">Typically includes</h3>
+        <ul class="tick-list"><li>Complete blood count and thyroid profile</li><li>Vitamin D</li><li>Pap smear</li><li>Clinical breast examination</li><li>Pelvic ultrasound</li><li>Mammogram for women over 40</li><li>Consultation with a gynaecologist</li></ul>
+        <div class="pkg-card__actions">
+          {{#if whatsapp.verified}}<a class="btn btn--whatsapp btn--sm btn--block" href="https://wa.me/{{whatsapp.number}}?text=Hello%20WeCare%20Hospital%2C%20I%20would%20like%20to%20book%20the%20Women%27s%20Health%20Check." target="_blank" rel="noopener">{{icon:i-whatsapp:icon icon--sm}} Book on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>{{/if}}
+          <a class="btn btn--outline btn--sm btn--block" href="appointment.html?dept=general-medicine">Request online</a>
+        </div>
+      </li>
+      <li class="pkg-card reveal" style="--d:2">
+        <span class="icon-wrap">{{icon:i-package}}</span>
+        <h2 class="pkg-card__title">Senior Citizen Health Check</h2>
+        <p class="pkg-card__text">Designed for adults over 60, with extra attention to bones, heart and senses.</p>
+        <h3 class="label">Typically includes</h3>
+        <ul class="tick-list"><li>Everything in the Comprehensive Health Check</li><li>Bone health assessment</li><li>PSA test for men</li><li>Vision and hearing screening</li><li>Consultation with a physician</li></ul>
+        <div class="pkg-card__actions">
+          {{#if whatsapp.verified}}<a class="btn btn--whatsapp btn--sm btn--block" href="https://wa.me/{{whatsapp.number}}?text=Hello%20WeCare%20Hospital%2C%20I%20would%20like%20to%20book%20the%20Senior%20Citizen%20Health%20Check." target="_blank" rel="noopener">{{icon:i-whatsapp:icon icon--sm}} Book on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>{{/if}}
+          <a class="btn btn--outline btn--sm btn--block" href="appointment.html?dept=general-medicine">Request online</a>
+        </div>
+      </li>
+    </ul>
+    <div class="note note--boxed">{{icon:i-info:icon icon--sm}}<p>The tests in each package and the current price are confirmed when you book. Your doctor may suggest adding or removing tests based on your age, history and results.</p></div>
+  </div>
+</section>
+
+<section class="section section--grey" aria-labelledby="pkg-prep-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Before your health check</p>
+      <h2 id="pkg-prep-title">How to prepare.</h2>
+    </div>
+    <div class="checklist-grid">
+      <div class="panel panel--line">
+        <h3>{{icon:i-clock}} The day before</h3>
+        <ul class="tick-list">
+          <li>Fast for 10 to 12 hours before blood tests. Water is fine.</li>
+          <li>Avoid alcohol for 24 hours</li>
+          <li>Keep taking your regular medicines unless your doctor says otherwise</li>
+          <li>Tell us if you are diabetic, so we can plan your fasting tests safely</li>
+        </ul>
+      </div>
+      <div class="panel panel--mint">
+        <h3>{{icon:i-file}} On the day</h3>
+        <ul class="tick-list">
+          <li>Arrive early in the morning, as most tests are done before breakfast</li>
+          <li>Wear loose, comfortable clothing</li>
+          <li>Bring previous reports and a list of your medicines</li>
+          <li>Allow a few hours for all tests and the consultation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> next-step}}

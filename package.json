@@ -1,0 +1,12 @@
+{
+  "name": "wecare-hospital-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-page hospital website concept by Vajha Agency",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "images": "node scripts/fetch-images.mjs",
+    "preview": "node build.mjs && npx --yes serve dist"
+  }
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "cardiology",
+    "name": "Cardiology",
+    "icon": "i-heart",
+    "short": "Consultation and ongoing care for conditions affecting the heart and blood vessels.",
+    "intro": "The cardiology team sees patients for heart and circulation concerns, from first consultations to long-term follow-up. Care is planned together with you and, where needed, with other departments.",
+    "areas": [
+      "Chest discomfort, breathlessness or palpitations",
+      "Blood pressure and cholesterol follow-up",
+      "Heart health reviews before surgery",
+      "Ongoing care after a cardiac event"
+    ],
+    "portrait": {
+      "src": "assets/img/doctors/cardiology",
+      "pos": "50% 30%"
+    }
+  },
+  {
+    "id": "orthopaedics",
+    "name": "Orthopaedics",
+    "icon": "i-joint",
+    "short": "Care for bones, joints, muscles and ligaments, from injuries to long-standing pain.",
+    "intro": "Orthopaedics looks after the musculoskeletal system. Consultants assess injuries and joint problems and talk you through the options, including physiotherapy and surgical opinions where appropriate.",
+    "areas": [
+      "Joint pain and stiffness",
+      "Sports and accidental injuries",
+      "Back and neck concerns",
+      "Recovery planning with physiotherapy"
+    ],
+    "portrait": {
+      "src": "assets/img/doctors/orthopaedics",
+      "pos": "50% 20%"
+    }
+  },
+  {
+    "id": "neurology",
+    "name": "Neurology",
+    "icon": "i-brain",
+    "short": "Specialist assessment for conditions of the brain, spine and nervous system.",
+    "intro": "Neurology consultants assess symptoms that may involve the brain, spinal cord or nerves, and coordinate any tests that are needed before agreeing a plan of care with you.",
+    "areas": [
+      "Headaches and migraine",
+      "Numbness, tingling or weakness",
+      "Dizziness and balance concerns",
+      "Seizure and memory assessments"
+    ],
+    "portrait": {
+      "src": "assets/img/doctors/neurology",
+      "pos": "50% 30%"
+    }
+  },
+  {
+    "id": "general-medicine",
+    "name": "General Medicine",
+    "icon": "i-stethoscope",
+    "short": "A first point of contact for adult health concerns, check-ups and long-term conditions.",
+    "intro": "General Medicine is often the best place to begin when you are unsure where to go. Physicians assess a wide range of adult health concerns and refer you on to a specialist when it is needed.",
+    "areas": [
+      "Fever, infections and general illness",
+      "Diabetes and thyroid follow-up",
+      "Preventive health check-ups",
+      "Care for multiple long-term conditions"
+    ],
+    "portrait": {
+      "src": "assets/img/doctors/general-medicine",
+      "pos": "50% 20%"
+    }
+  },
+  {
+    "id": "paediatrics",
+    "name": "Paediatrics",
+    "icon": "i-child",
+    "short": "Gentle, family-centred care for infants, children and adolescents.",
+    "intro": "The paediatrics team cares for children from birth through adolescence, with time set aside for parents' questions and a calm approach for young patients.",
+    "areas": [
+      "Newborn and infant check-ups",
+      "Growth and development reviews",
+      "Childhood illnesses and infections",
+      "Vaccination schedule guidance"
+    ],
+    "portrait": {
+      "src": "assets/img/doctors/paediatrics",
+      "pos": "50% 20%"
+    }
+  },
+  {
+    "id": "gynaecology",
+    "name": "Obstetrics & Gynaecology",
+    "icon": "i-women",
+    "short": "Women's health at every stage of life, including pregnancy care.",
+    "intro": "Obstetrics and Gynaecology supports women's health across life stages, offering private, respectful consultations and antenatal care planned around each patient.",
+    "areas": [
+      "Antenatal and postnatal care",
+      "Menstrual health concerns",
+      "Fertility and family planning conversations",
+      "Menopause care"
+    ],
+    "portrait": {
+      "src": "assets/img/doctors/gynaecology",
+      "pos": "50% 25%"
+    }
+  },
+  {
+    "id": "dermatology",
+    "name": "Dermatology",
+    "icon": "i-skin",
+    "short": "Assessment and care for skin, hair and nail conditions for all ages.",
+    "intro": "Dermatology consultants assess skin, hair and nail concerns, explain what they find in plain language and agree a treatment plan with you.",
+    "areas": [
+      "Rashes, allergies and eczema",
+      "Acne and pigmentation concerns",
+      "Hair loss and scalp conditions",
+      "Changes in moles or skin lesions"
+    ],
+    "portrait": {
+      "src": "assets/img/doctors/dermatology",
+      "pos": "50% 15%"
+    }
+  },
+  {
+    "id": "gastroenterology",
+    "name": "Gastroenterology",
+    "icon": "i-gut",
+    "short": "Care for the digestive system, including the stomach, intestines and liver.",
+    "intro": "Gastroenterology looks after the digestive tract and liver. Consultants assess symptoms, arrange any investigations that are needed and explain each step before it happens.",
+    "areas": [
+      "Acidity, reflux and indigestion",
+      "Abdominal pain or bloating",
+      "Changes in bowel habits",
+      "Liver health follow-up"
+    ],
+    "portrait": {
+      "src": "assets/img/doctors/gastroenterology",
+      "pos": "50% 35%"
+    }
+  }
+]

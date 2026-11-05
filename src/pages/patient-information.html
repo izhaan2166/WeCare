@@ -1,0 +1,184 @@
+<!--page {"title": "Patient Information | WeCare Hospital", "description": "Practical information for patients and visitors at WeCare Hospital: preparing for your visit, appointments, visiting hours, guidelines and frequently asked questions.", "nav": "patients"} -->
+<section class="page-hero" aria-labelledby="page-title">
+  {{> page-hero-petal}}
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Patient Information</li></ol></nav>
+    <div class="page-hero__grid">
+      <div>
+        <p class="eyebrow">Patients and visitors</p>
+        <h1 id="page-title">Information to help you plan your visit.</h1>
+        <p class="lead">Practical guidance for patients, families and visitors, from preparing for a first consultation to visiting someone during their stay.</p>
+      </div>
+      <div class="page-hero__media">{{img:patients:half:eager}}</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="Patient guidance">
+  <div class="container doc-layout">
+    <nav class="toc" aria-label="On this page">
+      <p class="label">On this page</p>
+      <ol data-scrollspy>
+        <li><a href="#preparing">Preparing for your visit</a></li>
+        <li><a href="#appointments">Appointments</a></li>
+        <li><a href="#visitors">Visitor guidelines</a></li>
+        <li><a href="#billing">Billing and insurance</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#faq">Questions</a></li>
+      </ol>
+    </nav>
+    <div>
+      <section class="prose-section" id="preparing" aria-labelledby="preparing-title">
+        <p class="eyebrow">Before you come</p>
+        <h2 id="preparing-title">Preparing for your visit</h2>
+        <p>A little preparation helps you get the most from your consultation. Please arrive about 15 minutes before your appointment time to allow for registration.</p>
+        <div class="checklist-grid">
+          <div class="panel">
+            <h3>{{icon:i-file}} What to bring</h3>
+            <ul class="tick-list">
+              <li>A government-issued photo ID</li>
+              <li>Previous prescriptions, discharge summaries and test reports</li>
+              <li>A list of the medicines you currently take</li>
+              <li>Your referral letter, if you have one</li>
+              <li>Insurance card or policy details, if applicable</li>
+            </ul>
+          </div>
+          <div class="panel panel--mint">
+            <h3>{{icon:i-chat}} Before your consultation</h3>
+            <ul class="tick-list">
+              <li>Write down your symptoms and when they started</li>
+              <li>Note the questions you want to ask</li>
+              <li>Check whether you need to fast before any tests</li>
+              <li>Bring a family member or carer if it would help</li>
+              <li>Tell us in advance about any access needs</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="prose-section" id="appointments" aria-labelledby="appointments-title">
+        <p class="eyebrow">Booking and changes</p>
+        <h2 id="appointments-title">Appointment information</h2>
+        <p>You can request an appointment online or by phone. An enquiry is not a confirmed booking: our appointments team will contact you to agree the date, time and consultant.</p>
+        <table class="hours-table">
+          <caption class="sr-only">Outpatient and appointment hours</caption>
+          <tbody>
+            <tr><th scope="row">Outpatient consultations</th><td>{{hours.opd}}<br>{{hours.opdSunday}}</td></tr>
+            <tr><th scope="row">Appointments desk</th><td>{{tel:appointmentsPhone}}<br><a href="mailto:{{appointmentsEmail}}">{{appointmentsEmail}}</a></td></tr>
+            <tr><th scope="row">Online enquiries</th><td>Available at any time. Our team responds during outpatient hours.</td></tr>
+          </tbody>
+        </table>
+        <h3>Changing or cancelling</h3>
+        <p class="muted">If you need to reschedule or cancel, please let us know as early as possible so the slot can be offered to another patient. Call the appointments desk or reply to your confirmation message.</p>
+        <div class="btn-row" style="margin-top:1.5rem"><a class="btn btn--primary" href="appointment.html">Request an appointment {{icon:i-arrow:icon icon--sm}}</a></div>
+      </section>
+
+      <section class="prose-section" id="visitors" aria-labelledby="visitors-title">
+        <p class="eyebrow">Visiting someone</p>
+        <h2 id="visitors-title">Patient and visitor guidelines</h2>
+        <p>Visitors are an important part of recovery. These simple guidelines help us keep every patient safe, comfortable and rested.</p>
+        <table class="hours-table">
+          <caption class="sr-only">Visiting hours</caption>
+          <tbody>
+            <tr><th scope="row">General visiting hours</th><td>{{hours.visiting}}</td></tr>
+            <tr><th scope="row">Visitors per patient</th><td>Two visitors at a time, unless the ward team advises otherwise</td></tr>
+          </tbody>
+        </table>
+        <div class="checklist-grid">
+          <div class="panel panel--line">
+            <h3>{{icon:i-check}} Please do</h3>
+            <ul class="tick-list">
+              <li>Clean your hands when entering and leaving patient areas</li>
+              <li>Keep phones on silent and voices low</li>
+              <li>Follow any instructions from nursing staff</li>
+              <li>Keep children supervised at all times</li>
+            </ul>
+          </div>
+          <div class="panel panel--line">
+            <h3>{{icon:i-alert}} Please avoid</h3>
+            <ul class="tick-list">
+              <li>Visiting if you have a fever, cough or infection</li>
+              <li>Bringing outside food without checking with the ward team</li>
+              <li>Taking photographs of other patients or staff</li>
+              <li>Smoking anywhere on the hospital premises</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout">{{icon:i-info}}<p>Visiting arrangements can change to protect patients, for example during seasonal infections. Please check with the ward team or call reception before you travel.</p></div>
+      </section>
+
+      <section class="prose-section" id="billing" aria-labelledby="billing-title">
+        <p class="eyebrow">Costs</p>
+        <h2 id="billing-title">Billing and insurance</h2>
+        <p>We aim to be clear about costs before treatment begins. Ask our billing desk for an estimate for consultations, tests or procedures, and for help understanding your bill.</p>
+        <div class="checklist-grid">
+          <div class="panel">
+            <h3>{{icon:i-shield}} Health insurance</h3>
+            <p class="muted" style="margin:0">If you plan to use health insurance, bring your policy details and photo ID. Our team can tell you which insurers and arrangements the hospital works with and what paperwork you will need.</p>
+          </div>
+          <div class="panel">
+            <h3>{{icon:i-file}} Estimates and receipts</h3>
+            <p class="muted" style="margin:0">Ask for a written estimate before a planned procedure. Itemised bills and receipts are available on request at the billing desk.</p>
+          </div>
+        </div>
+        <div class="btn-row" style="margin-top:1.5rem"><a class="link-arrow" href="insurance.html">How insurance and cashless treatment work {{icon:i-arrow:icon icon--sm}}</a><a class="link-arrow" href="health-packages.html">See health check packages {{icon:i-arrow:icon icon--sm}}</a></div>
+      </section>
+
+      <section class="prose-section" id="rights" aria-labelledby="rights-title">
+        <p class="eyebrow">Respect and privacy</p>
+        <h2 id="rights-title">Your rights as a patient</h2>
+        <p>Every patient has the right to respectful care, clear information, privacy, and to take part in decisions about their treatment. You can ask questions, request copies of your records and give feedback at any time.</p>
+        <ul class="tick-list" style="margin-top:1.5rem">
+          <li>To be treated with dignity, without discrimination</li>
+          <li>To receive information about your condition and treatment options in a language you understand</li>
+          <li>To give or withhold consent before any procedure</li>
+          <li>To have your personal and medical information kept confidential</li>
+          <li>To raise a concern or complaint and receive a response</li>
+        </ul>
+        <div class="btn-row" style="margin-top:1.75rem"><a class="link-arrow" href="about.html#charter-title">Read our commitments to patients {{icon:i-arrow:icon icon--sm}}</a></div>
+      </section>
+
+      <section class="prose-section" id="faq" aria-labelledby="pfaq-title">
+        <p class="eyebrow">Questions</p>
+        <h2 id="pfaq-title">Frequently asked questions</h2>
+        <p>General questions about visiting and appointments. These answers are not medical advice: please speak to a doctor about your own health. See <a href="faq.html">all frequently asked questions</a>.</p>
+        <div class="accordion" data-accordion style="margin-top:1.5rem">
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="pfaq-1" id="pfaq-1-btn">How do I book an appointment?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="pfaq-1" role="region" aria-labelledby="pfaq-1-btn"><div><div class="accordion__panel-inner"><p>Use the <a href="appointment.html">online appointment form</a> or call the appointments desk on {{appointmentsPhone.display}}. Your appointment is confirmed only when our team contacts you with the date, time and consultant.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="pfaq-2" id="pfaq-2-btn">Can I choose which doctor I see?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="pfaq-2" role="region" aria-labelledby="pfaq-2-btn"><div><div class="accordion__panel-inner"><p>Yes. You can name a preferred consultant on the appointment form. If they are unavailable at your preferred time, our team will offer the next available slot or another consultant in the same department.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="pfaq-3" id="pfaq-3-btn">Do I need a referral letter?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="pfaq-3" role="region" aria-labelledby="pfaq-3-btn"><div><div class="accordion__panel-inner"><p>A referral is not always required for an outpatient consultation, but a letter from your family doctor helps your consultant understand your history. Bring it along if you have one.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="pfaq-4" id="pfaq-4-btn">What are the visiting hours?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="pfaq-4" role="region" aria-labelledby="pfaq-4-btn"><div><div class="accordion__panel-inner"><p>General visiting hours are {{hours.visiting}}. Some areas may have different arrangements to protect patients who need rest or extra care. Please check with the ward team before you visit.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="pfaq-5" id="pfaq-5-btn">How do I find the right department?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="pfaq-5" role="region" aria-labelledby="pfaq-5-btn"><div><div class="accordion__panel-inner"><p>Read the descriptions on our <a href="specialities.html">specialities page</a>. If you are still unsure, select "Not sure" on the appointment form and our team will help direct you.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="pfaq-6" id="pfaq-6-btn">What should I bring to my consultation?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="pfaq-6" role="region" aria-labelledby="pfaq-6-btn"><div><div class="accordion__panel-inner"><p>A photo ID, previous prescriptions and test reports, a list of your current medicines, insurance details if applicable and a note of your symptoms and questions.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="pfaq-7" id="pfaq-7-btn">Can a family member come with me?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="pfaq-7" role="region" aria-labelledby="pfaq-7-btn"><div><div class="accordion__panel-inner"><p>Yes. You are welcome to bring a family member or carer to your consultation. Please let reception know if you need any help with mobility or communication.</p></div></div></div>
+      </div>
+      <div class="accordion__item">
+        <h3 class="accordion__heading"><button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="pfaq-8" id="pfaq-8-btn">How can I contact the hospital?<span class="accordion__sign" aria-hidden="true"></span></button></h3>
+        <div class="accordion__panel" id="pfaq-8" role="region" aria-labelledby="pfaq-8-btn"><div><div class="accordion__panel-inner"><p>Call {{phone.display}}, email <a href="mailto:{{email}}">{{email}}</a> or use our <a href="contact.html">contact form</a>. For a medical emergency, call 112 or go to the nearest emergency department.</p></div></div></div>
+      </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+{{> next-step}}
