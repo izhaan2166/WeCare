@@ -16,7 +16,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   {{jsonld}}
 </head>
@@ -28,12 +28,7 @@
 {{content}}
   </main>
   {{> footer}}
-  {{#if whatsapp.verified}}<aside class="wa-aside" aria-label="WhatsApp chat"><a class="wa-float" href="https://wa.me/{{whatsapp.number}}?text=Hello%20WeCare%20Hospital%2C%20I%20would%20like%20some%20help." target="_blank" rel="noopener" data-wa-float>{{icon:i-whatsapp}}<span class="wa-float__label">Chat on WhatsApp</span><span class="sr-only"> (opens in a new tab)</span></a></aside>{{/if}}
-  <nav class="action-bar" aria-label="Quick actions" data-action-bar>
-    <a class="action-bar__item" href="tel:{{phone.tel}}">{{icon:i-phone:icon icon--sm}}<span>Call</span></a>
-    {{#if whatsapp.verified}}<a class="action-bar__item" href="https://wa.me/{{whatsapp.number}}" target="_blank" rel="noopener">{{icon:i-whatsapp:icon icon--sm}}<span>WhatsApp</span><span class="sr-only"> (opens in a new tab)</span></a>{{/if}}
-    <a class="action-bar__item action-bar__item--primary" href="appointment.html">{{icon:i-calendar:icon icon--sm}}<span>Book a visit</span></a>
-  </nav>
+  {{#if whatsapp.verified}}<aside aria-label="WhatsApp chat"><a class="wa-float" href="https://wa.me/{{whatsapp.number}}?text=Hello%20WeCare%20Hospital%2C%20I%20would%20like%20some%20help." target="_blank" rel="noopener" data-wa-float>{{icon:i-whatsapp}}<span class="wa-float__label">Chat on WhatsApp</span><span class="sr-only"> (opens in a new tab)</span></a></aside>{{/if}}
   <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
